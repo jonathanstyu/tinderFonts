@@ -13,6 +13,8 @@
 		312F407F1B95015E002B3D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312F407E1B95015E002B3D4A /* Images.xcassets */; };
 		312F40821B95015E002B3D4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 312F40801B95015E002B3D4A /* LaunchScreen.xib */; };
 		312F408E1B95015F002B3D4A /* tinderFontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F408D1B95015F002B3D4A /* tinderFontsTests.swift */; };
+		312F409A1B9501D5002B3D4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 312F40991B9501D5002B3D4A /* Podfile */; };
+		75004204F9709F8E565992C1 /* Pods_tinderFonts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinderFonts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		312F40721B95015E002B3D4A /* tinderFonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinderFonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312F40761B95015E002B3D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312F40771B95015E002B3D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		312F40871B95015F002B3D4A /* tinderFontsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tinderFontsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		312F408C1B95015F002B3D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312F408D1B95015F002B3D4A /* tinderFontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderFontsTests.swift; sourceTree = "<group>"; };
+		312F40991B9501D5002B3D4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.release.xcconfig"; sourceTree = "<group>"; };
+		EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75004204F9709F8E565992C1 /* Pods_tinderFonts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +66,12 @@
 		312F40691B95015E002B3D4A = {
 			isa = PBXGroup;
 			children = (
+				312F40991B9501D5002B3D4A /* Podfile */,
 				312F40741B95015E002B3D4A /* tinderFonts */,
 				312F408A1B95015F002B3D4A /* tinderFontsTests */,
 				312F40731B95015E002B3D4A /* Products */,
+				54B28D93AFF2A36FD45E9E5E /* Pods */,
+				E14CD2EE83C5C90B2BB13962 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		54B28D93AFF2A36FD45E9E5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */,
+				B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E14CD2EE83C5C90B2BB13962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 312F40911B95015F002B3D4A /* Build configuration list for PBXNativeTarget "tinderFonts" */;
 			buildPhases = (
+				467155FD3D49D3E97927164D /* Check Pods Manifest.lock */,
 				312F406E1B95015E002B3D4A /* Sources */,
 				312F406F1B95015E002B3D4A /* Frameworks */,
 				312F40701B95015E002B3D4A /* Resources */,
+				CD2B4A02A0679D89E0854E00 /* Embed Pods Frameworks */,
+				54582F0B3FFC3CCBEFB3DB66 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +224,7 @@
 			files = (
 				312F407D1B95015E002B3D4A /* Main.storyboard in Resources */,
 				312F40821B95015E002B3D4A /* LaunchScreen.xib in Resources */,
+				312F409A1B9501D5002B3D4A /* Podfile in Resources */,
 				312F407F1B95015E002B3D4A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +237,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		467155FD3D49D3E97927164D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54582F0B3FFC3CCBEFB3DB66 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2B4A02A0679D89E0854E00 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		312F406E1B95015E002B3D4A /* Sources */ = {
@@ -338,9 +417,11 @@
 		};
 		312F40921B95015F002B3D4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tinderFonts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -348,9 +429,11 @@
 		};
 		312F40931B95015F002B3D4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tinderFonts/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +492,7 @@
 				312F40931B95015F002B3D4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		312F40941B95015F002B3D4A /* Build configuration list for PBXNativeTarget "tinderFontsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +501,7 @@
 				312F40961B95015F002B3D4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
