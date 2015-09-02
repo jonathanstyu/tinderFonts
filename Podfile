@@ -5,6 +5,7 @@ use_frameworks!
 target 'tinderFonts' do
     pod 'Facade'
     pod 'Koloda'
+    pod 'RichEditorView'
 end
 
 target 'tinderFontsTests' do
