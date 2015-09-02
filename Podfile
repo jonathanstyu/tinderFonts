@@ -6,6 +6,7 @@ target 'tinderFonts' do
     pod 'Facade'
     pod 'Koloda'
     pod 'RichEditorView'
+    pod 'ChameleonFramework/Swift'
 end
 
 target 'tinderFontsTests' do

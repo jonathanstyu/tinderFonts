@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class StartViewController: UIViewController {
     var tinderTextField: UITextView!
@@ -18,7 +19,8 @@ class StartViewController: UIViewController {
         
         self.title = "Hello"
         self.tinderTextField = UITextView(frame: self.view.frame)
-        self.tinderTextField.backgroundColor = UIColor.lightGrayColor()
+        self.tinderTextField.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [RandomFlatColorWithShade(.Light), RandomFlatColorWithShade(.Dark)])
+
         tinderTextField.text = "Hello"
         
         self.view.addSubview(self.tinderTextField)

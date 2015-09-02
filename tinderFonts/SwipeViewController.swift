@@ -10,18 +10,28 @@ import Foundation
 import UIKit
 import Koloda
 import pop
+import ChameleonFramework
 
 class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
-    var cardCount: Int = 1
+    var cardCount: Int = 5
     var tinderText: String!
+    var swipeView: KolodaView!
     
     convenience init() {
         self.init(tinderText: nil)
     }
     
     init(tinderText: String?) {
-        self.tinderText = tinderText
         super.init(nibName: nil, bundle: nil)
+        self.tinderText = tinderText
+        self.swipeView = KolodaView()
+        self.swipeView.delegate = self
+        self.swipeView.dataSource = self
+        
+        self.view.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [RandomFlatColorWithShade(.Light), RandomFlatColorWithShade(.Dark)])
+        
+        self.swipeView.frame = CGRectMake(40, 40, 200, 500)
+        self.view.addSubview(self.swipeView)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -46,7 +56,12 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
     }
     
     func kolodaViewForCardAtIndex(koloda: KolodaView, index: UInt) -> UIView {
-        var card = UIView()
+        var card = UIView(frame: CGRectMake(0, 0, 100, 120))
+        card.backgroundColor = UIColor.randomFlatColor()
+        
+        var label = UILabel(frame: card.frame)
+        label.text = "Card \(index)"
+        card.addSubview(label)
         
         return card
     }

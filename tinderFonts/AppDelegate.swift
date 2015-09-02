@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.rootViewController = startViewNVC
         self.window?.makeKeyAndVisible()
         
+        createColorTheme()
         return true
     }
 
@@ -47,6 +48,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func createColorTheme() {
+        let navBar = UINavigationBar.appearance()
+        navBar.barTintColor = UIColor.whiteColor()
     }
 
 
