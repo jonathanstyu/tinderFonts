@@ -53,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func createColorTheme() {
         let navBar = UINavigationBar.appearance()
         navBar.barTintColor = UIColor.whiteColor()
+        
     }
 
 

@@ -14,6 +14,9 @@
 		312F408E1B95015F002B3D4A /* tinderFontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F408D1B95015F002B3D4A /* tinderFontsTests.swift */; };
 		312F409A1B9501D5002B3D4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 312F40991B9501D5002B3D4A /* Podfile */; };
 		312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F409B1B968A9A002B3D4A /* SwipeViewController.swift */; };
+		319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 319EDAFC1B99E2340095ED50 /* font-descriptions.json */; };
+		319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDAFE1B99E81D0095ED50 /* Factory.swift */; };
+		319EDB031B9A639D0095ED50 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 319EDB021B9A639D0095ED50 /* Fonts */; };
 		75004204F9709F8E565992C1 /* Pods_tinderFonts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		312F408D1B95015F002B3D4A /* tinderFontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderFontsTests.swift; sourceTree = "<group>"; };
 		312F40991B9501D5002B3D4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		312F409B1B968A9A002B3D4A /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		319EDAFC1B99E2340095ED50 /* font-descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "font-descriptions.json"; sourceTree = "<group>"; };
+		319EDAFE1B99E81D0095ED50 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		319EDB021B9A639D0095ED50 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = tinderFonts/Fonts; sourceTree = "<group>"; };
 		B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.release.xcconfig"; sourceTree = "<group>"; };
 		EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,7 @@
 			children = (
 				312F40991B9501D5002B3D4A /* Podfile */,
 				312F40741B95015E002B3D4A /* tinderFonts */,
+				319EDB021B9A639D0095ED50 /* Fonts */,
 				312F408A1B95015F002B3D4A /* tinderFontsTests */,
 				312F40731B95015E002B3D4A /* Products */,
 				54B28D93AFF2A36FD45E9E5E /* Pods */,
@@ -87,11 +94,13 @@
 		312F40741B95015E002B3D4A /* tinderFonts */ = {
 			isa = PBXGroup;
 			children = (
+				319EDAFE1B99E81D0095ED50 /* Factory.swift */,
 				312F40771B95015E002B3D4A /* AppDelegate.swift */,
 				312F40791B95015E002B3D4A /* StartViewController.swift */,
 				312F409B1B968A9A002B3D4A /* SwipeViewController.swift */,
 				312F407E1B95015E002B3D4A /* Images.xcassets */,
 				312F40801B95015E002B3D4A /* LaunchScreen.xib */,
+				319EDAFC1B99E2340095ED50 /* font-descriptions.json */,
 				312F40751B95015E002B3D4A /* Supporting Files */,
 			);
 			path = tinderFonts;
@@ -222,7 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319EDB031B9A639D0095ED50 /* Fonts in Resources */,
 				312F40821B95015E002B3D4A /* LaunchScreen.xib in Resources */,
+				319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */,
 				312F409A1B9501D5002B3D4A /* Podfile in Resources */,
 				312F407F1B95015E002B3D4A /* Images.xcassets in Resources */,
 			);
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */,
 				312F407A1B95015E002B3D4A /* StartViewController.swift in Sources */,
 				312F40781B95015E002B3D4A /* AppDelegate.swift in Sources */,
 				312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */,

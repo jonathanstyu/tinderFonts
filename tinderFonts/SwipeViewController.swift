@@ -14,7 +14,7 @@ import ChameleonFramework
 import Facade
 
 class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
-    var cardCount: Int = 5
+    var cardCount: Int = 15
     var tinderText: String!
     var swipeView: KolodaView!
     
@@ -42,6 +42,8 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
         
         customizeUIElements()
         layoutFacade()
+        
+        println(UIFont.familyNames())
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -91,12 +93,11 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
 // Delegate methods required for Koloda
     
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
-        return 5
+        return UInt(cardCount)
     }
     
     func kolodaViewForCardAtIndex(koloda: KolodaView, index: UInt) -> UIView {
         var card = UIView(frame: CGRectMake(0, 0, koloda.width(), koloda.height()))
-        println(card.width())
         card.backgroundColor = UIColor.randomFlatColor()
         card.layer.cornerRadius = 12.0
         card.clipsToBounds = true
@@ -104,6 +105,7 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
         var label = UILabel(frame: CGRectMake(0, 0, card.frame.width, 45))
         label.backgroundColor = UIColor.whiteColor()
         label.text = "Card \(index)"
+        label.font = UIFont(name: "ABeeZee", size: 15)
         label.textAlignment = NSTextAlignment.Center
         card.addSubview(label)
         
@@ -115,7 +117,10 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
     }
     
     func kolodaDidSwipedCardAtIndex(koloda: KolodaView, index: UInt, direction: SwipeResultDirection) {
-        cardCount += 1
+        if (cardCount - Int(index)) == 7 {
+            cardCount += 11
+            swipeView.reloadData()
+        }
     }
     
     func kolodaDidSelectCardAtIndex(koloda: KolodaView, index: UInt) {
@@ -124,6 +129,7 @@ class SwipeViewController: UIViewController, KolodaViewDataSource, KolodaViewDel
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
         println("Out of cards!")
+        swipeView.resetCurrentCardNumber()
     }
     
     func kolodaShouldTransparentizeNextCard(koloda: KolodaView) -> Bool {
