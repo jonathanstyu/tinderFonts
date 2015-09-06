@@ -13,6 +13,7 @@ import pop
 import ChameleonFramework
 import Facade
 import FontBlaster
+import QuartzCore
 
 extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     // Delegate methods required for Koloda
@@ -38,10 +39,24 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         fontLabel.textAlignment = NSTextAlignment.Center
         card.addSubview(fontLabel)
         
+//        This section is for the actual card
         var textCard = UIView()
         var textCardBorder: CGFloat = 10.0
+        var colorTheme = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Light)
+        
+        textCard.tag = 0
         textCard.frame = CGRectMake(textCardBorder, (fontLabel.frame.height + textCardBorder), card.frame.width - (2 * textCardBorder), card.frame.width - (2 * textCardBorder))
-        textCard.backgroundColor = UIColor.randomFlatColor()
+        textCard.backgroundColor = colorTheme
+        
+        var textLabel = UILabel(frame: CGRectMake(0, 0, textCard.width(), textCard.height()))
+        textLabel.text = self.tinderText
+        textLabel.textColor = ContrastColorOf(colorTheme, true)
+        textLabel.font = UIFont(name: randomFont, size: 35)
+        textLabel.textAlignment = NSTextAlignment.Center
+        textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        textLabel.numberOfLines = 0
+        textCard.addSubview(textLabel)
+        
         card.addSubview(textCard)
         
         return card
@@ -55,6 +70,16 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         if (cardCount - Int(index)) == 7 {
             cardCount += 11
             swipeView.reloadData()
+        }
+        
+        if direction == SwipeResultDirection.Right {
+            var textCard: UIView = koloda.viewWithTag(0) as UIView!
+            UIGraphicsBeginImageContextWithOptions(textCard.bounds.size, view.opaque, 0.0)
+            view.layer.renderInContext(UIGraphicsGetCurrentContext())
+            var image = UIGraphicsGetImageFromCurrentImageContext()
+            self.imageCache.append(image)
+            UIGraphicsEndImageContext()
+            self.imageView.reloadData()
         }
     }
     

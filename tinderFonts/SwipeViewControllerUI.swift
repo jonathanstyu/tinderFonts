@@ -18,10 +18,17 @@ extension SwipeViewController {
     
 //    Called in ViewDidLoad
     func customizeUIElements() {
+        
         self.swipeView = KolodaView()
         self.swipeView.delegate = self
         self.swipeView.dataSource = self
         self.view.addSubview(self.swipeView)
+        
+        generateSwipeButtons()
+    }
+    
+    func generateSwipeButtons() {
+//        Uses font awesome
         
         var leftButtonString = String.fontAwesomeString("fa-thumbs-down")
         var leftButtonStringAttributed = NSMutableAttributedString(string: leftButtonString, attributes: [
@@ -54,7 +61,7 @@ extension SwipeViewController {
         var visibleHeight:CGFloat = self.view.frame.height - topBorder
         
         self.swipeView.anchorTopCenterFillingWidthWithLeftAndRightPadding(25.0,topPadding: 50.0 + topBorder, height: visibleHeight * 0.6)
-        self.view.groupHorizontally([self.leftSwipeButton, self.rightSwipeButton], centeredUnderView: self.swipeView, topPadding: 40.0, spacing: 75.0, width: 50, height: 35)        
+        self.view.groupHorizontally([self.leftSwipeButton, self.rightSwipeButton], centeredUnderView: self.swipeView, topPadding: 30.0, spacing: 75.0, width: 50, height: 35)
         
     }
     

@@ -21,6 +21,7 @@
 		319EDB0E1B9BB97E0095ED50 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 319EDB021B9A639D0095ED50 /* Fonts */; };
 		319EDB101B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */; };
 		319EDB121B9BBD730095ED50 /* SwipeViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */; };
+		319EDB141B9BC8990095ED50 /* SwipeViewControllerGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */; };
 		75004204F9709F8E565992C1 /* Pods_tinderFonts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		319EDB0A1B9B54C30095ED50 /* iconfonts-fontawesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iconfonts-fontawesome.swift"; sourceTree = "<group>"; };
 		319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerKoloda.swift; sourceTree = "<group>"; };
 		319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerUI.swift; sourceTree = "<group>"; };
+		319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerGallery.swift; sourceTree = "<group>"; };
 		B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.release.xcconfig"; sourceTree = "<group>"; };
 		EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				312F409B1B968A9A002B3D4A /* SwipeViewController.swift */,
 				319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */,
 				319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */,
+				319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */,
 				312F407E1B95015E002B3D4A /* Images.xcassets */,
 				312F40801B95015E002B3D4A /* LaunchScreen.xib */,
 				319EDAFC1B99E2340095ED50 /* font-descriptions.json */,
@@ -318,6 +321,7 @@
 				319EDB101B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift in Sources */,
 				319EDB121B9BBD730095ED50 /* SwipeViewControllerUI.swift in Sources */,
 				319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */,
+				319EDB141B9BC8990095ED50 /* SwipeViewControllerGallery.swift in Sources */,
 				312F407A1B95015E002B3D4A /* StartViewController.swift in Sources */,
 				312F40781B95015E002B3D4A /* AppDelegate.swift in Sources */,
 				312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */,

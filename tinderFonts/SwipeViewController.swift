@@ -18,9 +18,12 @@ class SwipeViewController: UIViewController {
     var cardCount: Int = 15
     var tinderText: String!
     var swipeView: KolodaView!
+    var imageView: UICollectionView!
     
     var rightSwipeButton: UIButton!
     var leftSwipeButton: UIButton!
+    
+    var imageCache: [UIImage]!
     
     convenience init() {
         self.init(tinderText: nil)
@@ -39,11 +42,14 @@ class SwipeViewController: UIViewController {
         super.viewDidLoad()
         self.title = tinderText
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismiss")
-        self.view.backgroundColor = UIColor(gradientStyle: UIGradientStyle.TopToBottom, withFrame: self.view.frame, andColors: [UIColor.flatGrayColor(), RandomFlatColorWithShade(.Dark)])
+        self.view.backgroundColor = UIColor.flatSandColor()
+        self.imageCache = []
+        
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
         
         customizeUIElements()
+        setupCollectionView()
         layoutFacade()
     }
     
