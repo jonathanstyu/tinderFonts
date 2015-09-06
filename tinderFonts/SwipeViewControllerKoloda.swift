@@ -73,13 +73,15 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         }
         
         if direction == SwipeResultDirection.Right {
-            var textCard: UIView = koloda.viewWithTag(0) as UIView!
-            UIGraphicsBeginImageContextWithOptions(textCard.bounds.size, view.opaque, 0.0)
-            view.layer.renderInContext(UIGraphicsGetCurrentContext())
-            var image = UIGraphicsGetImageFromCurrentImageContext()
-            self.imageCache.append(image)
-            UIGraphicsEndImageContext()
+            self.imageCache.append(self.currentImage)
             self.imageView.reloadData()
+            
+            var textCard: UIView = koloda.subviews[2] as! UIView
+            println(textCard)
+            UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, self.view.window!.screen.scale as CGFloat)
+            textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
+            self.currentImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
         }
     }
     

@@ -24,6 +24,7 @@ class SwipeViewController: UIViewController {
     var leftSwipeButton: UIButton!
     
     var imageCache: [UIImage]!
+    var currentImage: UIImage!
     
     convenience init() {
         self.init(tinderText: nil)
@@ -44,6 +45,8 @@ class SwipeViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismiss")
         self.view.backgroundColor = UIColor.flatSandColor()
         self.imageCache = []
+        self.currentImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = UIColor.flatSandColorDark()
         
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
@@ -55,6 +58,15 @@ class SwipeViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.swipeView.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+//        
+        var textCard: UIView = swipeView.subviews[2] as! UIView
+        UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, 1.0)
+        textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
+        self.currentImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
     }
     
 //    Other Methods
