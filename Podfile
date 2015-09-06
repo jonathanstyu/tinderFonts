@@ -7,6 +7,7 @@ target 'tinderFonts' do
     pod 'Koloda'
     pod 'RichEditorView'
     pod 'ChameleonFramework/Swift'
+    pod 'FontBlaster'
 end
 
 target 'tinderFontsTests' do
