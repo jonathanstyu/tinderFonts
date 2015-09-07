@@ -76,8 +76,8 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
             self.imageCache.append(self.currentImage)
             self.imageView.reloadData()
             
+            
             var textCard: UIView = koloda.subviews[2] as! UIView
-            println(textCard)
             UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, self.view.window!.screen.scale as CGFloat)
             textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
             self.currentImage = UIGraphicsGetImageFromCurrentImageContext()

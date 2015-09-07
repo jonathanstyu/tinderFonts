@@ -61,7 +61,10 @@ class SwipeViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-//        
+        super.viewDidAppear(animated)
+        
+        
+//        Encapsulates the image capture code so that it image-captures the first card and sets it as self.currentImage. CurrentImage gets saved to the imageCache if it is swiped right
         var textCard: UIView = swipeView.subviews[2] as! UIView
         UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, 1.0)
         textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
