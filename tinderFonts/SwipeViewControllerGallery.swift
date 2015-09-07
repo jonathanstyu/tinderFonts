@@ -23,22 +23,22 @@ extension SwipeViewController: UICollectionViewDataSource, UICollectionViewDeleg
         self.imageView.backgroundColor = ComplementaryFlatColorOf(UIColor.flatSandColor())
         self.imageView.registerClass(CardViewControllerCell.self, forCellWithReuseIdentifier: "cell")
         
-        self.view.addSubview(self.imageView)
-        
-        self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: 10.0, height: 75)
+        self.view.addSubview(self.imageView)        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = imageView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CardViewControllerCell
-        
-        cell.backgroundColor = UIColor.flatBrownColorDark()
+        cell.backgroundColor = UIColor.randomFlatColor()
         cell.cardImageView.image = self.imageCache[indexPath.row]
-//        cell.cardImageView = self.imageCache[indexPath.row]
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.imageCache.count > 0 {
+            return self.imageCache.count
+        }
+        
         return self.imageCache.count
     }
     

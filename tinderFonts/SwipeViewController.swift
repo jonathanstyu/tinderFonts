@@ -22,6 +22,7 @@ class SwipeViewController: UIViewController {
     
     var rightSwipeButton: UIButton!
     var leftSwipeButton: UIButton!
+    var downloadButton: UIButton!
     
     var imageCache: [UIImage]!
     var currentImage: UIImage!
@@ -53,6 +54,7 @@ class SwipeViewController: UIViewController {
         
         customizeUIElements()
         setupCollectionView()
+//        Always call this one last
         layoutFacade()
     }
     

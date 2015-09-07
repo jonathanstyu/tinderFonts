@@ -9,14 +9,16 @@
 import UIKit
 import ChameleonFramework
 import pop
+import FontBlaster
 
 class StartViewController: UIViewController {
-    var tinderTextField: UITextView!
+    var textPrompt: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Hello There"
+        FontBlaster.blast()
         setBackground()
     }
 
@@ -27,38 +29,60 @@ class StartViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
         promptForText()
     }
+
     
     func promptForText() {
-        var inputTextField = UITextField()
+        var containerView = UIView()
+        containerView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+        containerView.layer.borderColor = UIColor.randomFlatColor().CGColor
+        containerView.layer.borderWidth = 3.0
+        containerView.layer.cornerRadius = 10.0
+        containerView.clipsToBounds = true
+
+        self.view.addSubview(containerView)
         
-//        Initialize the UIAlertController
-        let addItem: UIAlertController = UIAlertController(title: "What text do you wanna try out?", message: "Write it down here!", preferredStyle: .Alert)
+        var textLabel = UILabel()
+        textLabel.textAlignment = NSTextAlignment.Center
+        textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        textLabel.numberOfLines = 0
+        textLabel.text = "All the fonts. Animated. Colored. For your friends."
+        containerView.addSubview(textLabel)
         
-//        Initalize the Text Field
-        addItem.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            inputTextField = textField
-        }
+        self.textPrompt = UITextField()
+        self.textPrompt.backgroundColor = UIColor.clearColor()
+        self.textPrompt.placeholder = "Well, what do you wanna say?"
+        self.textPrompt.textAlignment = NSTextAlignment.Center
+        containerView.addSubview(self.textPrompt)
         
-//        Initialize the button
-        let cancelItem: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil )
-//        addItem.addAction(cancelItem)
+        var nextButtonString = String.fontAwesomeString("fa-arrow-right")
+        var nextButtonStringAttributed = NSMutableAttributedString(string: nextButtonString, attributes: [
+            NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 11.0)!
+            ])
+        nextButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize("FontAwesome", fontSize: 35.0), range: NSRange(location: 0, length: 1))
+        nextButtonStringAttributed.addAttribute(NSForegroundColorAttributeName, value: UIColor.blackColor(), range: NSRange(location: 0, length: 1))
         
-//        Initialize the Confirm button
-        let addItemButton: UIAlertAction = UIAlertAction(title: "Get Started", style: .Default, handler: { action -> Void in
-            var swipeNVC = UINavigationController()
-            let text = inputTextField.text as String
-            println(text)
-            
-            swipeNVC.viewControllers = [SwipeViewController(tinderText: text)]
-            self.presentViewController(swipeNVC, animated: true, completion: nil)
-        })
+        var textButton = UIButton()
+        textButton.setAttributedTitle(nextButtonStringAttributed, forState: UIControlState.Normal)
+        textButton.addTarget(self, action: "startSwipe:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(textButton)
         
-        addItem.addAction(addItemButton)
+        containerView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(view.width() * 0.1, topAndBottomPadding: view.height() * 0.38)
+        textLabel.anchorTopCenterWithTopPadding(10.0, width: containerView.width() * 0.9, height: 30)
+        textPrompt.alignUnder(textLabel, matchingCenterWithTopPadding: 10.0, width: containerView.width() * 0.9, height: 45)
+        textButton.alignUnder(textPrompt, matchingCenterWithTopPadding: 10.0, width: 45, height: 35)
         
-        self.navigationController!.presentViewController(addItem, animated: true, completion: nil)
+        
+    }
+    
+    func startSwipe(sender: AnyObject) {
+        var swipeNVC = UINavigationController()
+        var text = self.textPrompt.text as String
+        self.textPrompt.text = ""
+        swipeNVC.viewControllers = [SwipeViewController(tinderText: text)]
+        self.presentViewController(swipeNVC, animated: true, completion: nil)
     }
     
     func setBackground() {
