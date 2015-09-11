@@ -5,9 +5,9 @@ use_frameworks!
 target 'tinderFonts' do
     pod 'Facade'
     pod 'Koloda'
-    pod 'RichEditorView'
     pod 'ChameleonFramework/Swift'
     pod 'FontBlaster'
+    pod 'LTMorphingLabel', '~> 0.0.7'
 end
 
 target 'tinderFontsTests' do
