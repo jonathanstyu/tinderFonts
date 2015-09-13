@@ -37,14 +37,13 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         fontLabel.text = "Font: \(randomFont)"
         fontLabel.font = UIFont(name: randomFont, size: 15)
         fontLabel.textAlignment = NSTextAlignment.Center
-        card.addSubview(fontLabel)
+        
         
 //        This section is for the actual card
         var textCard = UIView()
         var textCardBorder: CGFloat = 10.0
         var colorTheme = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Light)
         
-        textCard.tag = 0
         textCard.frame = CGRectMake(textCardBorder, (fontLabel.frame.height + textCardBorder), card.frame.width - (2 * textCardBorder), card.frame.width - (2 * textCardBorder))
         textCard.backgroundColor = colorTheme
         
@@ -55,9 +54,11 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         textLabel.numberOfLines = 0
-        textCard.addSubview(textLabel)
         
+        
+        textCard.addSubview(textLabel)
         card.addSubview(textCard)
+        card.addSubview(fontLabel)
         
         return card
     }
@@ -76,8 +77,7 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
             self.imageCache.append(self.currentImage)
             self.imageView.reloadData()
             
-            
-            var textCard: UIView = koloda.subviews[2] as! UIView
+            let textCard = koloda.subviews[2] as! UIView
             UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, self.view.window!.screen.scale as CGFloat)
             textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
             self.currentImage = UIGraphicsGetImageFromCurrentImageContext()

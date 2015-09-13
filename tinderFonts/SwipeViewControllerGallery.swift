@@ -28,7 +28,7 @@ extension SwipeViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = imageView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CardViewControllerCell
-        cell.backgroundColor = UIColor.randomFlatColor()
+        cell.backgroundColor = UIColor.flatWhiteColorDark()
         cell.cardImageView.image = self.imageCache[indexPath.row]
         
         return cell
@@ -43,7 +43,9 @@ extension SwipeViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(75, 75)
+        var topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
+        var visibleHeight:CGFloat = self.view.frame.height - topBorder
+        return CGSizeMake(visibleHeight * 0.12, visibleHeight * 0.12)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {

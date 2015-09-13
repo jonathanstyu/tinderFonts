@@ -20,7 +20,7 @@ class CardViewControllerCell: UICollectionViewCell, UIGestureRecognizerDelegate 
         self.cardImageView = UIImageView()
         self.contentView.addSubview(self.cardImageView)
         
-        self.cardImageView.anchorInCenterWithWidth(50.0, height: 50.0)
+        self.cardImageView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(5.0, topAndBottomPadding: 5.0)
         
     }
 

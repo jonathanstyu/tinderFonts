@@ -49,16 +49,18 @@ extension SwipeViewController {
         var visibleHeight:CGFloat = self.view.frame.height - topBorder
         
         self.swipeView.anchorTopCenterFillingWidthWithLeftAndRightPadding(25.0,topPadding: 50.0 + topBorder, height: visibleHeight * 0.6)
-        self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: 10.0, height: 100)
+        self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: 10.0, height: visibleHeight * 0.15)
         self.downloadButton.alignUnder(self.swipeView, matchingCenterWithTopPadding: 30.0, width: 50, height: 35)
         
     }
     
     func downloadButtonTapped(target: AnyObject) {
-        Factory.createGif(self.imageCache, loopCount: 5, frameDelay: 2.0) { (data, error) -> Void in
+        Factory.createGif(self.imageCache, loopCount: 5, frameDelay: 1.0) { (data, error) -> Void in
             if data != nil {
-                var view = GifView(gifImage: data, frame: UIApplication.sharedApplication().keyWindow!.frame)
-                UIApplication.sharedApplication().keyWindow!.addSubview(view)
+//                var view = GifView(gifImage: data, frame: UIApplication.sharedApplication().keyWindow!.frame)
+//                UIApplication.sharedApplication().keyWindow!.addSubview(view)
+                var gifView = GifView(gifImage: data)
+                self.presentViewController(gifView, animated: true, completion: nil)
             }
         }
     }
