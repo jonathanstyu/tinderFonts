@@ -18,8 +18,12 @@ extension SwipeViewController {
     
 //    Called in ViewDidLoad
     func customizeUIElements() {
+        var topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
+        var visibleHeight:CGFloat = self.view.frame.height - topBorder
+        var swipeSize: CGFloat = self.view.width() * 0.85
         
         self.swipeView = KolodaView()
+        self.swipeView.frame = CGRectMake(self.view.width() * 0.075, topBorder + 50, swipeSize, swipeSize)
         self.swipeView.delegate = self
         self.swipeView.dataSource = self
         self.view.addSubview(self.swipeView)
@@ -47,8 +51,8 @@ extension SwipeViewController {
     func layoutFacade() {
         var topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
         var visibleHeight:CGFloat = self.view.frame.height - topBorder
-        
-        self.swipeView.anchorTopCenterFillingWidthWithLeftAndRightPadding(25.0,topPadding: 50.0 + topBorder, height: visibleHeight * 0.6)
+        var swipeSize: CGFloat = self.view.width() * 0.85
+
         self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: 10.0, height: visibleHeight * 0.15)
         self.downloadButton.alignUnder(self.swipeView, matchingCenterWithTopPadding: 30.0, width: 50, height: 35)
         

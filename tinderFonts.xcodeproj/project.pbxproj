@@ -24,6 +24,8 @@
 		319EDB141B9BC8990095ED50 /* SwipeViewControllerGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */; };
 		319EDB161B9CD7EC0095ED50 /* CardViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB151B9CD7EC0095ED50 /* CardViewControllerCell.swift */; };
 		31C7F2841BA1190F00AB75BC /* gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7F2831BA1190F00AB75BC /* gif.swift */; };
+		31D09B331BA8743700791A66 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D09B321BA8743700791A66 /* Card.swift */; };
+		31D09B351BA900A500791A66 /* CardTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D09B341BA900A500791A66 /* CardTapView.swift */; };
 		31F121EA1BA27B370088DD72 /* GifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F121E91BA27B370088DD72 /* GifView.swift */; };
 		75004204F9709F8E565992C1 /* Pods_tinderFonts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		319EDB151B9CD7EC0095ED50 /* CardViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewControllerCell.swift; sourceTree = "<group>"; };
 		31C7F2831BA1190F00AB75BC /* gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gif.swift; sourceTree = "<group>"; };
 		31C7F2861BA11A4600AB75BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		31D09B321BA8743700791A66 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		31D09B341BA900A500791A66 /* CardTapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTapView.swift; sourceTree = "<group>"; };
 		31F121E91BA27B370088DD72 /* GifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifView.swift; sourceTree = "<group>"; };
 		B5C12EC6BB1E53F039B3DA20 /* Pods-tinderFonts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.release.xcconfig"; sourceTree = "<group>"; };
 		EA3E89801BB687F1CC26D873 /* Pods-tinderFonts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinderFonts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinderFonts/Pods-tinderFonts.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				31C7F2851BA1191700AB75BC /* Libraries */,
+				31D09B321BA8743700791A66 /* Card.swift */,
+				31D09B341BA900A500791A66 /* CardTapView.swift */,
 				319EDB151B9CD7EC0095ED50 /* CardViewControllerCell.swift */,
 				312F40771B95015E002B3D4A /* AppDelegate.swift */,
 				312F40791B95015E002B3D4A /* StartViewController.swift */,
@@ -343,9 +349,11 @@
 				319EDB121B9BBD730095ED50 /* SwipeViewControllerUI.swift in Sources */,
 				319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */,
 				319EDB141B9BC8990095ED50 /* SwipeViewControllerGallery.swift in Sources */,
+				31D09B331BA8743700791A66 /* Card.swift in Sources */,
 				312F407A1B95015E002B3D4A /* StartViewController.swift in Sources */,
 				312F40781B95015E002B3D4A /* AppDelegate.swift in Sources */,
 				31F121EA1BA27B370088DD72 /* GifView.swift in Sources */,
+				31D09B351BA900A500791A66 /* CardTapView.swift in Sources */,
 				312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

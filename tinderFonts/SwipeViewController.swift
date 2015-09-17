@@ -26,6 +26,8 @@ class SwipeViewController: UIViewController {
     
     var imageCache: [UIImage]!
     var currentImage: UIImage!
+    var cards: [Card]!
+    var fonts: [String]!
     
     convenience init() {
         self.init(tinderText: nil)
@@ -46,20 +48,21 @@ class SwipeViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismiss")
         self.view.backgroundColor = UIColor.flatSandColor()
         self.imageCache = []
+        self.fonts = []
+        self.cards = []
         self.currentImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = UIColor.flatSandColorDark()
         
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
         
+        generateCards()
         customizeUIElements()
         setupCollectionView()
+        
 //        Always call this one last
         layoutFacade()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.swipeView.reloadData()
+//        self.swipeView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -67,16 +70,19 @@ class SwipeViewController: UIViewController {
         
         
 //        Encapsulates the image capture code so that it image-captures the first card and sets it as self.currentImage. CurrentImage gets saved to the imageCache if it is swiped right
-        var textCard: UIView = swipeView.subviews[2] as! UIView
-        UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, 1.0)
-        textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
-        self.currentImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        setCurrentImage()
     }
     
 //    Other Methods
     func dismiss() {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func setCurrentImage() {
+        UIGraphicsBeginImageContextWithOptions(swipeView.frame.size, false, 1.0)
+        swipeView.drawViewHierarchyInRect(swipeView.bounds, afterScreenUpdates: true)
+        self.currentImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
     }
     
 }

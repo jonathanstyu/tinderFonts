@@ -18,47 +18,27 @@ import QuartzCore
 extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     // Delegate methods required for Koloda
     
+    func generateCards() {
+        for var i = 0; i < 10; ++i {
+            var fontLibrary = UIFont.familyNames()
+            var randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
+            var randomFont: String = fontLibrary[randomNumber] as! String
+//            var cardFrame = CGRectMake(0, 0, self.swipeView.width(), self.swipeView.height())
+            
+            var createdCard = Card(font: randomFont, text: "hello")
+            
+            self.cards.append(createdCard)
+        }
+    }
+    
     func kolodaNumberOfCards(koloda: KolodaView) -> UInt {
-        return UInt(cardCount)
+        return UInt(self.cards.count)
     }
     
     func kolodaViewForCardAtIndex(koloda: KolodaView, index: UInt) -> UIView {
-        var card = UIView(frame: CGRectMake(0, 0, koloda.width(), koloda.height()))
-        var fontLabel = UILabel(frame: CGRectMake(0, 0, card.frame.width, 35))
-        var fontLibrary = UIFont.familyNames()
-        var randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
+        var card = self.cards[Int(index)]
         
-        card.backgroundColor = UIColor.flatWhiteColorDark()
-        card.layer.cornerRadius = 12.0
-        card.clipsToBounds = true
-        
-        var randomFont: String = fontLibrary[randomNumber] as! String
-        fontLabel.backgroundColor = UIColor.flatWhiteColor()
-        fontLabel.text = "Font: \(randomFont)"
-        fontLabel.font = UIFont(name: randomFont, size: 15)
-        fontLabel.textAlignment = NSTextAlignment.Center
-        
-        
-//        This section is for the actual card
-        var textCard = UIView()
-        var textCardBorder: CGFloat = 10.0
-        var colorTheme = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Light)
-        
-        textCard.frame = CGRectMake(textCardBorder, (fontLabel.frame.height + textCardBorder), card.frame.width - (2 * textCardBorder), card.frame.width - (2 * textCardBorder))
-        textCard.backgroundColor = colorTheme
-        
-        var textLabel = UILabel(frame: CGRectMake(0, 0, textCard.width(), textCard.height()))
-        textLabel.text = self.tinderText
-        textLabel.textColor = ContrastColorOf(colorTheme, true)
-        textLabel.font = UIFont(name: randomFont, size: 35)
-        textLabel.textAlignment = NSTextAlignment.Center
-        textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        textLabel.numberOfLines = 0
-        
-        
-        textCard.addSubview(textLabel)
-        card.addSubview(textCard)
-        card.addSubview(fontLabel)
+        card.resetFrame(CGRectMake(0, 0, koloda.width(), koloda.height()))
         
         return card
     }
@@ -68,30 +48,24 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func kolodaDidSwipedCardAtIndex(koloda: KolodaView, index: UInt, direction: SwipeResultDirection) {
-        if (cardCount - Int(index)) == 7 {
-            cardCount += 11
-            swipeView.reloadData()
-        }
         
         if direction == SwipeResultDirection.Right {
             self.imageCache.append(self.currentImage)
             self.imageView.reloadData()
             
-            let textCard = koloda.subviews[2] as! UIView
-            UIGraphicsBeginImageContextWithOptions(textCard.frame.size, false, self.view.window!.screen.scale as CGFloat)
-            textCard.drawViewHierarchyInRect(textCard.frame, afterScreenUpdates: false)
-            self.currentImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
+            setCurrentImage()
         }
     }
     
     func kolodaDidSelectCardAtIndex(koloda: KolodaView, index: UInt) {
-        println(cardCount)
+//        var tapGesture = CardTapView(card: <#Card#>, frame: <#CGRect#>)
     }
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
         println("Out of cards!")
-        swipeView.resetCurrentCardNumber()
+//        swipeView.resetCurrentCardNumber()
+        generateCards()
+        self.swipeView.reloadData()
     }
     
     func kolodaShouldTransparentizeNextCard(koloda: KolodaView) -> Bool {
