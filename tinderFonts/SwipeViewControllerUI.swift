@@ -28,6 +28,7 @@ extension SwipeViewController {
         self.view.addSubview(self.swipeView)
         
         generateSwipeButtons()
+        createAdBanner()
     }
     
     func generateSwipeButtons() {
@@ -48,13 +49,9 @@ extension SwipeViewController {
     
 //    Called in ViewDidLoad
     func layoutFacade() {
-        let topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
-        let visibleHeight:CGFloat = self.view.frame.height - topBorder
-        let swipeSize: CGFloat = self.view.width() * 0.85
 
-        self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: 10.0, height: visibleHeight * 0.15)
-        self.downloadButton.alignUnder(self.swipeView, matchingCenterWithTopPadding: 30.0, width: 50, height: 35)
-        
+        self.imageView.anchorBottomCenterFillingWidthWithLeftAndRightPadding(10.0, bottomPadding: visibleHeight * 0.1, height: visibleHeight * 0.15)
+        self.downloadButton.alignUnder(self.swipeView, matchingCenterWithTopPadding: visibleHeight * 0.05, width: 50, height: 35)
     }
     
     func downloadButtonTapped(target: AnyObject) {

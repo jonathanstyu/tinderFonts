@@ -15,6 +15,7 @@
 		312F409A1B9501D5002B3D4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 312F40991B9501D5002B3D4A /* Podfile */; };
 		312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F409B1B968A9A002B3D4A /* SwipeViewController.swift */; };
 		319B5D631BAF58C100395FE4 /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 319B5D621BAF58C100395FE4 /* Fonts.bundle */; settings = {ASSET_TAGS = (); }; };
+		319B5D651BAF638000395FE4 /* SwipeViewControllerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */; settings = {ASSET_TAGS = (); }; };
 		319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 319EDAFC1B99E2340095ED50 /* font-descriptions.json */; };
 		319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDAFE1B99E81D0095ED50 /* Factory.swift */; };
 		319EDB071B9A798C0095ED50 /* Patterns in Resources */ = {isa = PBXBuildFile; fileRef = 319EDB061B9A798C0095ED50 /* Patterns */; };
@@ -54,6 +55,7 @@
 		312F40991B9501D5002B3D4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		312F409B1B968A9A002B3D4A /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		319B5D621BAF58C100395FE4 /* Fonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fonts.bundle; sourceTree = "<group>"; };
+		319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerAd.swift; sourceTree = "<group>"; };
 		319EDAFC1B99E2340095ED50 /* font-descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "font-descriptions.json"; sourceTree = "<group>"; };
 		319EDAFE1B99E81D0095ED50 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		319EDB061B9A798C0095ED50 /* Patterns */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Patterns; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				312F40791B95015E002B3D4A /* StartViewController.swift */,
 				312F409B1B968A9A002B3D4A /* SwipeViewController.swift */,
 				319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */,
+				319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */,
 				319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */,
 				319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */,
 				312F407E1B95015E002B3D4A /* Images.xcassets */,
@@ -344,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319B5D651BAF638000395FE4 /* SwipeViewControllerAd.swift in Sources */,
 				319EDB0B1B9B54C30095ED50 /* iconfonts-fontawesome.swift in Sources */,
 				319EDB161B9CD7EC0095ED50 /* CardViewControllerCell.swift in Sources */,
 				31C7F2841BA1190F00AB75BC /* gif.swift in Sources */,

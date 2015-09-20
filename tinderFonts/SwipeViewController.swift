@@ -13,6 +13,7 @@ import pop
 import ChameleonFramework
 import Facade
 import FontBlaster
+import iAd
 
 class SwipeViewController: UIViewController {
     var cardCount: Int = 15
@@ -28,6 +29,12 @@ class SwipeViewController: UIViewController {
     var currentImage: UIImage!
     var cards: [Card]!
     var fonts: [String]!
+    
+    var adView: ADBannerView!
+    
+    var topBorder: CGFloat!
+    var visibleHeight:CGFloat!
+    var swipeSize: CGFloat!
     
     convenience init() {
         self.init(tinderText: nil)
@@ -47,11 +54,16 @@ class SwipeViewController: UIViewController {
         self.title = tinderText
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismiss")
         self.view.backgroundColor = UIColor.flatSandColor()
+        self.canDisplayBannerAds = true
         self.imageCache = []
         self.fonts = []
         self.cards = []
         self.currentImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = UIColor.flatSandColorDark()
+        
+        topBorder = self.navigationController!.navigationBar.frame.height
+        visibleHeight = self.view.frame.height - topBorder
+        swipeSize = self.view.width() * 0.85
         
 //        FontBlaster.debugEnabled = true
         FontBlaster.blast()

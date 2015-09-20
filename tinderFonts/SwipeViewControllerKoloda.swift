@@ -24,8 +24,13 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
             let randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
             let randomFont: String = fontLibrary[randomNumber] 
 //            var cardFrame = CGRectMake(0, 0, self.swipeView.width(), self.swipeView.height())
+            var defaultText = "hello"
             
-            let createdCard = Card(font: randomFont, text: "hello")
+            if self.tinderText != "" {
+                defaultText = self.tinderText
+            }
+            
+            let createdCard = Card(font: randomFont, text: defaultText)
             
             self.cards.append(createdCard)
         }

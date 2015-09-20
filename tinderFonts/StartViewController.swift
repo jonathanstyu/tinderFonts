@@ -53,7 +53,7 @@ class StartViewController: UIViewController {
         
         self.textPrompt = UITextField()
         self.textPrompt.backgroundColor = UIColor.clearColor()
-        self.textPrompt.placeholder = "Well, what do you wanna say?"
+        self.textPrompt.placeholder = "What you wanna say?"
         self.textPrompt.textAlignment = NSTextAlignment.Center
         containerView.addSubview(self.textPrompt)
         
@@ -69,7 +69,8 @@ class StartViewController: UIViewController {
         textButton.addTarget(self, action: "startSwipe:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(textButton)
         
-        containerView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(view.width() * 0.1, topAndBottomPadding: view.height() * 0.38)
+//        containerView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(view.width() * 0.1, topAndBottomPadding: view.height() * 0.38)
+        containerView.anchorInCenterWithWidth(view.width() * 0.7, height: view.height() * 0.3)
         textLabel.anchorTopCenterWithTopPadding(10.0, width: containerView.width() * 0.9, height: 30)
         textPrompt.alignUnder(textLabel, matchingCenterWithTopPadding: 10.0, width: containerView.width() * 0.9, height: 45)
         textButton.alignUnder(textPrompt, matchingCenterWithTopPadding: 10.0, width: 45, height: 35)
