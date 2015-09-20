@@ -35,7 +35,7 @@ class StartViewController: UIViewController {
 
     
     func promptForText() {
-        var containerView = UIView()
+        let containerView = UIView()
         containerView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
         containerView.layer.borderColor = UIColor.randomFlatColor().CGColor
         containerView.layer.borderWidth = 3.0
@@ -44,7 +44,7 @@ class StartViewController: UIViewController {
 
         self.view.addSubview(containerView)
         
-        var textLabel = UILabel()
+        let textLabel = UILabel()
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         textLabel.numberOfLines = 0
@@ -57,14 +57,14 @@ class StartViewController: UIViewController {
         self.textPrompt.textAlignment = NSTextAlignment.Center
         containerView.addSubview(self.textPrompt)
         
-        var nextButtonString = String.fontAwesomeString("fa-arrow-right")
-        var nextButtonStringAttributed = NSMutableAttributedString(string: nextButtonString, attributes: [
+        let nextButtonString = String.fontAwesomeString("fa-arrow-right")
+        let nextButtonStringAttributed = NSMutableAttributedString(string: nextButtonString, attributes: [
             NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 11.0)!
             ])
-        nextButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize("FontAwesome", fontSize: 35.0), range: NSRange(location: 0, length: 1))
+        nextButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont(name: "FontAwesome", size: 35.0)!, range: NSRange(location: 0, length: 1))
         nextButtonStringAttributed.addAttribute(NSForegroundColorAttributeName, value: UIColor.blackColor(), range: NSRange(location: 0, length: 1))
         
-        var textButton = UIButton()
+        let textButton = UIButton()
         textButton.setAttributedTitle(nextButtonStringAttributed, forState: UIControlState.Normal)
         textButton.addTarget(self, action: "startSwipe:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(textButton)
@@ -78,23 +78,23 @@ class StartViewController: UIViewController {
     }
     
     func startSwipe(sender: AnyObject) {
-        var swipeNVC = UINavigationController()
-        var text = self.textPrompt.text as String
+        let swipeNVC = UINavigationController()
+        let text = self.textPrompt.text as String?
         self.textPrompt.text = ""
         swipeNVC.viewControllers = [SwipeViewController(tinderText: text)]
         self.presentViewController(swipeNVC, animated: true, completion: nil)
     }
     
     func setBackground() {
-        var colorTheme = UIColor.randomFlatColor()
+        let colorTheme = UIColor.randomFlatColor()
         
         self.navigationController?.navigationBar.barTintColor = colorTheme
         
-        var backView = UIView()
+        let backView = UIView()
         backView.frame = view.bounds
         
 //        var gradLayer = createRandomLayer()
-        var gradLayer = CALayer()
+        let gradLayer = CALayer()
         gradLayer.backgroundColor = colorTheme.CGColor
         gradLayer.pop_addAnimation(animation(), forKey: nil)
         gradLayer.frame = backView.bounds
@@ -105,7 +105,7 @@ class StartViewController: UIViewController {
     }
     
     func createRandomLayer() -> CAGradientLayer {
-        var gradLayer = CAGradientLayer()
+        let gradLayer = CAGradientLayer()
         gradLayer.colors = [UIColor.randomFlatColor().CGColor, UIColor.randomFlatColor().CGColor, UIColor.randomFlatColor().CGColor]
         gradLayer.locations = [0.0, 0.5, 1.0]
         

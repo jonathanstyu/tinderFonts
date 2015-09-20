@@ -18,16 +18,16 @@ class CardTapView: UIView, UIGestureRecognizerDelegate {
         super.init(frame: frame)
         self.fontDescriptions = Factory.importJSON("font-descriptions")
         
-        var fontLabel = UILabel(frame: CGRectMake(self.width() * 0.5, 0, self.width(), self.width() * 0.5))
+        let fontLabel = UILabel(frame: CGRectMake(self.width() * 0.5, 0, self.width(), self.width() * 0.5))
         fontLabel.text = self.fontDescriptions["Abel"]
         fontLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         
-        var gestureTap = UITapGestureRecognizer()
+        let gestureTap = UITapGestureRecognizer()
         gestureTap.addTarget(self, action: "removeFromSuperView")
         self.addGestureRecognizer(gestureTap)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

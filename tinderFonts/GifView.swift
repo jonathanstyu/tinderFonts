@@ -24,7 +24,7 @@ class GifView: UIViewController, UIGestureRecognizerDelegate {
         createUI()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -35,22 +35,22 @@ class GifView: UIViewController, UIGestureRecognizerDelegate {
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.frame = CGRectMake(0, 0, 300, 300)
         
-        var popImageViewAnimation = POPBasicAnimation()
+        let popImageViewAnimation = POPBasicAnimation()
         popImageViewAnimation.property = POPAnimatableProperty.propertyWithName(kPOPViewCenter) as! POPAnimatableProperty
         popImageViewAnimation.toValue = NSValue(CGPoint: self.view.center)
         popImageViewAnimation.delegate = self
         imageView.pop_addAnimation(popImageViewAnimation, forKey: "popImage")
         
-        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
         visualbg = UIVisualEffectView(effect: blurEffect)
         visualbg.frame = self.view.frame
         
-        var dismissGesture = UITapGestureRecognizer(target: self, action: "dismissView:")
+        let dismissGesture = UITapGestureRecognizer(target: self, action: "dismissView:")
         dismissGesture.delegate = self
         visualbg.addGestureRecognizer(dismissGesture)
         
-        var shareButtonString = String.fontAwesomeString("fa-share-square-o")
-        var shareButtonStringAttributed = NSMutableAttributedString(string: shareButtonString, attributes: [
+        let shareButtonString = String.fontAwesomeString("fa-share-square-o")
+        let shareButtonStringAttributed = NSMutableAttributedString(string: shareButtonString, attributes: [
             NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 11.0)!
             ])
         shareButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize("FontAwesome", fontSize: 50.0), range: NSRange(location: 0, length: 1))

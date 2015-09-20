@@ -21,11 +21,11 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     func generateCards() {
         for var i = 0; i < 10; ++i {
             var fontLibrary = UIFont.familyNames()
-            var randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
-            var randomFont: String = fontLibrary[randomNumber] as! String
+            let randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
+            let randomFont: String = fontLibrary[randomNumber] 
 //            var cardFrame = CGRectMake(0, 0, self.swipeView.width(), self.swipeView.height())
             
-            var createdCard = Card(font: randomFont, text: "hello")
+            let createdCard = Card(font: randomFont, text: "hello")
             
             self.cards.append(createdCard)
         }
@@ -36,7 +36,7 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func kolodaViewForCardAtIndex(koloda: KolodaView, index: UInt) -> UIView {
-        var card = self.cards[Int(index)]
+        let card = self.cards[Int(index)]
         
         card.resetFrame(CGRectMake(0, 0, koloda.width(), koloda.height()))
         
@@ -62,7 +62,7 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
-        println("Out of cards!")
+        print("Out of cards!")
 //        swipeView.resetCurrentCardNumber()
         generateCards()
         self.swipeView.reloadData()

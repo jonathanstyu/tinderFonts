@@ -13,7 +13,7 @@ import ChameleonFramework
 extension SwipeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func setupCollectionView() {
-        var layout = UICollectionViewFlowLayout()
+        let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
         
         self.imageView = UICollectionView(frame: CGRectMake(0, 0, 0, 0), collectionViewLayout: layout)
@@ -43,8 +43,8 @@ extension SwipeViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        var topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
-        var visibleHeight:CGFloat = self.view.frame.height - topBorder
+        let topBorder: CGFloat = self.navigationController!.navigationBar.frame.height
+        let visibleHeight:CGFloat = self.view.frame.height - topBorder
         return CGSizeMake(visibleHeight * 0.12, visibleHeight * 0.12)
     }
     

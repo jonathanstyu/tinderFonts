@@ -19,7 +19,7 @@ class Card: UIView {
     var font: String!
     
     class func generateCard(numberCards: Int, options: [String: AnyObject]) -> [Card] {
-        var cardArray: [Card] = []
+        let cardArray: [Card] = []
         
         for var i = 0; i < numberCards; ++i {
 //            var generatedCard = Card(frame: CGRectZero, font: "Helvetica")
@@ -34,7 +34,7 @@ class Card: UIView {
     init(font: String, text: String) {
         super.init(frame: CGRectZero)
         
-        var colorTheme = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Light)
+        let colorTheme = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Light)
         
         self.backgroundColor = colorTheme
         self.font = font
@@ -42,7 +42,7 @@ class Card: UIView {
         
         textLabel = UILabel(frame: CGRectMake(0, 0, self.width(), self.height()))
         textLabel.text = self.text
-        textLabel.textColor = ContrastColorOf(colorTheme, true)
+        textLabel.textColor = ContrastColorOf(colorTheme, returnFlat: true)
         textLabel.font = UIFont(name: self.font, size: 35)
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
@@ -56,7 +56,7 @@ class Card: UIView {
         self.textLabel.frame = frameToSet
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

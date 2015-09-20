@@ -14,11 +14,11 @@
 		312F408E1B95015F002B3D4A /* tinderFontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F408D1B95015F002B3D4A /* tinderFontsTests.swift */; };
 		312F409A1B9501D5002B3D4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 312F40991B9501D5002B3D4A /* Podfile */; };
 		312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F409B1B968A9A002B3D4A /* SwipeViewController.swift */; };
+		319B5D631BAF58C100395FE4 /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 319B5D621BAF58C100395FE4 /* Fonts.bundle */; settings = {ASSET_TAGS = (); }; };
 		319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 319EDAFC1B99E2340095ED50 /* font-descriptions.json */; };
 		319EDAFF1B99E81D0095ED50 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDAFE1B99E81D0095ED50 /* Factory.swift */; };
 		319EDB071B9A798C0095ED50 /* Patterns in Resources */ = {isa = PBXBuildFile; fileRef = 319EDB061B9A798C0095ED50 /* Patterns */; };
 		319EDB0B1B9B54C30095ED50 /* iconfonts-fontawesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB0A1B9B54C30095ED50 /* iconfonts-fontawesome.swift */; };
-		319EDB0E1B9BB97E0095ED50 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 319EDB021B9A639D0095ED50 /* Fonts */; };
 		319EDB101B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */; };
 		319EDB121B9BBD730095ED50 /* SwipeViewControllerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */; };
 		319EDB141B9BC8990095ED50 /* SwipeViewControllerGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319EDB131B9BC8990095ED50 /* SwipeViewControllerGallery.swift */; };
@@ -53,9 +53,9 @@
 		312F408D1B95015F002B3D4A /* tinderFontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderFontsTests.swift; sourceTree = "<group>"; };
 		312F40991B9501D5002B3D4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		312F409B1B968A9A002B3D4A /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		319B5D621BAF58C100395FE4 /* Fonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fonts.bundle; sourceTree = "<group>"; };
 		319EDAFC1B99E2340095ED50 /* font-descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "font-descriptions.json"; sourceTree = "<group>"; };
 		319EDAFE1B99E81D0095ED50 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
-		319EDB021B9A639D0095ED50 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		319EDB061B9A798C0095ED50 /* Patterns */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Patterns; sourceTree = "<group>"; };
 		319EDB0A1B9B54C30095ED50 /* iconfonts-fontawesome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iconfonts-fontawesome.swift"; sourceTree = "<group>"; };
 		319EDB0F1B9BBCCB0095ED50 /* SwipeViewControllerKoloda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerKoloda.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				312F407E1B95015E002B3D4A /* Images.xcassets */,
 				312F40801B95015E002B3D4A /* LaunchScreen.xib */,
 				319EDAFC1B99E2340095ED50 /* font-descriptions.json */,
-				319EDB021B9A639D0095ED50 /* Fonts */,
+				319B5D621BAF58C100395FE4 /* Fonts.bundle */,
 				312F40751B95015E002B3D4A /* Supporting Files */,
 			);
 			path = tinderFonts;
@@ -235,7 +235,9 @@
 		312F406A1B95015E002B3D4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jonathan Yu";
 				TargetAttributes = {
 					312F40711B95015E002B3D4A = {
@@ -271,11 +273,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				319EDB0E1B9BB97E0095ED50 /* Fonts in Resources */,
 				312F40821B95015E002B3D4A /* LaunchScreen.xib in Resources */,
 				319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */,
 				312F409A1B9501D5002B3D4A /* Podfile in Resources */,
 				312F407F1B95015E002B3D4A /* Images.xcassets in Resources */,
+				319B5D631BAF58C100395FE4 /* Fonts.bundle in Resources */,
 				319EDB071B9A798C0095ED50 /* Patterns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +411,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -424,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -462,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -477,6 +480,7 @@
 				INFOPLIST_FILE = tinderFonts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -489,6 +493,7 @@
 				INFOPLIST_FILE = tinderFonts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -507,6 +512,7 @@
 				);
 				INFOPLIST_FILE = tinderFontsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tinderFonts.app/tinderFonts";
 			};
@@ -522,6 +528,7 @@
 				);
 				INFOPLIST_FILE = tinderFontsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tinderFonts.app/tinderFonts";
 			};

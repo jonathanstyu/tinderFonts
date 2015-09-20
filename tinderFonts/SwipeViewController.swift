@@ -38,7 +38,7 @@ class SwipeViewController: UIViewController {
         self.tinderText = tinderText
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -53,7 +53,7 @@ class SwipeViewController: UIViewController {
         self.currentImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = UIColor.flatSandColorDark()
         
-        FontBlaster.debugEnabled = true
+//        FontBlaster.debugEnabled = true
         FontBlaster.blast()
         
         generateCards()

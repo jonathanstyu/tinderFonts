@@ -7,7 +7,6 @@ target 'tinderFonts' do
     pod 'Koloda'
     pod 'ChameleonFramework/Swift'
     pod 'FontBlaster'
-    pod 'LTMorphingLabel', '~> 0.0.7'
 end
 
 target 'tinderFontsTests' do
