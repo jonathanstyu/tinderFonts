@@ -69,12 +69,20 @@ class StartViewController: UIViewController {
         textButton.addTarget(self, action: "startSwipe:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(textButton)
         
+        let thanksButton = UIButton()
+        thanksButton.setTitle("Dedications", forState: UIControlState.Normal)
+        thanksButton.addTarget(self, action: "presentThanksController:", forControlEvents: UIControlEvents.TouchUpInside)
+        thanksButton.layer.borderColor = UIColor.whiteColor().CGColor
+        thanksButton.layer.borderWidth = 2.0
+        thanksButton.layer.cornerRadius = 5.0
+        self.view.addSubview(thanksButton)
+        
 //        containerView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(view.width() * 0.1, topAndBottomPadding: view.height() * 0.38)
         containerView.anchorInCenterWithWidth(view.width() * 0.7, height: view.height() * 0.3)
         textLabel.anchorTopCenterWithTopPadding(10.0, width: containerView.width() * 0.9, height: 30)
         textPrompt.alignUnder(textLabel, matchingCenterWithTopPadding: 10.0, width: containerView.width() * 0.9, height: 45)
         textButton.alignUnder(textPrompt, matchingCenterWithTopPadding: 10.0, width: 45, height: 35)
-        
+        thanksButton.anchorBottomRightWithRightPadding(5.0, bottomPadding: 5.0, width: 150.0, height: 35.0)
         
     }
     
@@ -121,6 +129,17 @@ class StartViewController: UIViewController {
         basic.duration = 2.4
         
         return basic
+    }
+    
+    func presentThanksController(sender: AnyObject) {
+        var fontLibrary = UIFont.familyNames()
+        let randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
+        let randomFont: String = fontLibrary[randomNumber]
+        
+        let thanksVC = FontViewController(font: randomFont)
+        thanksVC.createdCard.textLabel.text = "Thanks and Dedication \n (In \(randomFont))"
+        thanksVC.descriptionLabel.text = "This would not exist without the following products: \n \n Facade \n FontBlaster \n Koloda \n Chameleon \n \nThanks to Do-Hee Kim for inspiring this project with 100daysoffonts.com"
+        self.presentViewController(thanksVC, animated: true, completion: nil)
     }
     
 }

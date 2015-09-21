@@ -43,6 +43,7 @@ class SwipeViewController: UIViewController {
     init(tinderText: String?) {
         super.init(nibName: nil, bundle: nil)
         self.tinderText = tinderText
+        
     }
 
     required init?(coder aDecoder: NSCoder) {

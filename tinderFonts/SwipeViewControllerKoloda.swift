@@ -23,7 +23,6 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
             var fontLibrary = UIFont.familyNames()
             let randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
             let randomFont: String = fontLibrary[randomNumber] 
-//            var cardFrame = CGRectMake(0, 0, self.swipeView.width(), self.swipeView.height())
             var defaultText = "hello"
             
             if self.tinderText != "" {
@@ -63,8 +62,10 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func kolodaDidSelectCardAtIndex(koloda: KolodaView, index: UInt) {
-//        var tapGesture = CardTapView(card: <#Card#>, frame: <#CGRect#>)
-    }
+        let card = self.cards[Int(index)]
+        let fontDescribe = FontViewController(font: card.font)
+        self.presentViewController(fontDescribe, animated: true, completion: nil)
+    }    
     
     func kolodaDidRunOutOfCards(koloda: KolodaView) {
         print("Out of cards!")
@@ -74,7 +75,7 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
     }
     
     func kolodaShouldTransparentizeNextCard(koloda: KolodaView) -> Bool {
-        return true
+        return false
     }
     
     func kolodaShouldMoveBackgroundCard(koloda: KolodaView) -> Bool {
