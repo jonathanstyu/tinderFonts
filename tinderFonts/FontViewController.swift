@@ -41,7 +41,8 @@ class FontViewController: UIViewController, UIGestureRecognizerDelegate {
     func createUI() {
         createdCard = Card(font: fontName, text: fontName)
         
-        let viewFrame = CGRectMake(0, view.frame.maxY / 2.0, view.width(), (view.frame.size.height / 2.0))
+        let labelBorder: CGFloat = 10.0
+        let viewFrame = CGRectMake(labelBorder, (view.frame.maxY / 2.0) + labelBorder, view.width() - (2 * labelBorder), (view.frame.size.height / 2.0) - (2 * labelBorder))
         let cardFrame = CGRectMake(0, 0, view.width(), view.frame.size.height / 2.0)
         descriptionLabel = UILabel(frame: viewFrame)
         let dismissGesture = UITapGestureRecognizer(target: self, action: "dismissView:")
