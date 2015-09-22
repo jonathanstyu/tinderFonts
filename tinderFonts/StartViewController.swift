@@ -138,7 +138,7 @@ class StartViewController: UIViewController {
         
         let thanksVC = FontViewController(font: randomFont)
         thanksVC.createdCard.textLabel.text = "Thanks and Dedication \n (In \(randomFont))"
-        thanksVC.descriptionLabel.text = "This would not exist without the following products: \n \n Facade \n FontBlaster \n Koloda \n Chameleon \n \nThanks to Do-Hee Kim for inspiring this project with 100daysoffonts.com"
+        thanksVC.descriptionLabel.text = "This would not exist without the following products: \n \n Facade \n FontBlaster \n Koloda \n Chameleon \n \nDescriptions via Wikipedia \nThanks to Do-Hee Kim for inspiring this project with 100daysoffonts.com"
         self.presentViewController(thanksVC, animated: true, completion: nil)
     }
     

@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinderFonts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3127945B1BAF98DD0007E423 /* FontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
-		312F40721B95015E002B3D4A /* tinderFonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinderFonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		312F40721B95015E002B3D4A /* ThunderFonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderFonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312F40761B95015E002B3D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312F40771B95015E002B3D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312F40791B95015E002B3D4A /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		312F40731B95015E002B3D4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				312F40721B95015E002B3D4A /* tinderFonts.app */,
+				312F40721B95015E002B3D4A /* ThunderFonts.app */,
 				312F40871B95015F002B3D4A /* tinderFontsTests.xctest */,
 			);
 			name = Products;
@@ -214,7 +214,7 @@
 			);
 			name = tinderFonts;
 			productName = tinderFonts;
-			productReference = 312F40721B95015E002B3D4A /* tinderFonts.app */;
+			productReference = 312F40721B95015E002B3D4A /* ThunderFonts.app */;
 			productType = "com.apple.product-type.application";
 		};
 		312F40861B95015F002B3D4A /* tinderFontsTests */ = {
@@ -489,7 +489,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ThunderFonts;
 			};
 			name = Debug;
 		};
@@ -502,7 +502,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ThunderFonts;
 			};
 			name = Release;
 		};
