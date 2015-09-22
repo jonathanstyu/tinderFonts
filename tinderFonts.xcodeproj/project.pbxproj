@@ -488,7 +488,7 @@
 				INFOPLIST_FILE = tinderFonts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.jonathanyu.tinderFonts;
 				PRODUCT_NAME = ThunderFonts;
 			};
 			name = Debug;
@@ -501,7 +501,7 @@
 				INFOPLIST_FILE = tinderFonts/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "net.jonathanyu.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.jonathanyu.tinderFonts;
 				PRODUCT_NAME = ThunderFonts;
 			};
 			name = Release;
