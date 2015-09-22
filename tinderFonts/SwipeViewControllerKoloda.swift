@@ -56,6 +56,8 @@ extension SwipeViewController: KolodaViewDataSource, KolodaViewDelegate {
         if direction == SwipeResultDirection.Right {
             self.imageCache.append(self.currentImage)
             self.imageView.reloadData()
+            self.downloadButton.enabled = true
+            
             
             setCurrentImage()
         }

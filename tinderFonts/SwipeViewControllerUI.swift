@@ -40,10 +40,19 @@ extension SwipeViewController {
             ])
         downloadButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize("FontAwesome", fontSize: 50.0), range: NSRange(location: 0, length: 1))
         downloadButtonStringAttributed.addAttribute(NSForegroundColorAttributeName, value: UIColor.flatBlueColor(), range: NSRange(location: 0, length: 1))
+
+        let disabledDownloadButtonStringAttributed = NSMutableAttributedString(string: downloadButtonString, attributes: [
+            NSFontAttributeName: UIFont(name: "HelveticaNeue", size: 11.0)!
+            ])
+        disabledDownloadButtonStringAttributed.addAttribute(NSFontAttributeName, value: UIFont.iconFontOfSize("FontAwesome", fontSize: 50.0), range: NSRange(location: 0, length: 1))
+        disabledDownloadButtonStringAttributed.addAttribute(NSForegroundColorAttributeName, value: UIColor.flatRedColorDark(), range: NSRange(location: 0, length: 1))
+
         
         self.downloadButton = UIButton()
         self.downloadButton.setAttributedTitle(downloadButtonStringAttributed, forState: UIControlState.Normal)
+        self.downloadButton.setAttributedTitle(disabledDownloadButtonStringAttributed, forState: UIControlState.Disabled)
         self.downloadButton.addTarget(self, action: "downloadButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.downloadButton.enabled = false
         self.view.addSubview(self.downloadButton)
     }
     

@@ -52,6 +52,8 @@ class FontViewController: UIViewController, UIGestureRecognizerDelegate {
         descriptionLabel.font = UIFont(name: fontName, size: 18.0)
         descriptionLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         descriptionLabel.numberOfLines = 0
+        descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.minimumScaleFactor = 0.1
         descriptionLabel.text = fontDescriptions[fontName]
         descriptionLabel.backgroundColor = UIColor.flatWhiteColor()
         
