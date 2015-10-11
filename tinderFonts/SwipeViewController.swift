@@ -23,7 +23,7 @@ class SwipeViewController: UIViewController {
     
     var rightSwipeButton: UIButton!
     var leftSwipeButton: UIButton!
-    var downloadButton: UIButton!
+    var downloadButton: UIBarButtonItem!
     
     var imageCache: [UIImage]!
     var currentImage: UIImage!

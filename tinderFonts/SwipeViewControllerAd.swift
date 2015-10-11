@@ -24,7 +24,8 @@ extension SwipeViewController: ADBannerViewDelegate {
     }
     
     func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        adView.removeFromSuperview()
+        banner.removeFromSuperview()
+        print("banner error: \(error.description)")
     }
     
 }

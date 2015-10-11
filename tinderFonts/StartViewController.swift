@@ -48,7 +48,9 @@ class StartViewController: UIViewController {
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
         textLabel.numberOfLines = 0
-        textLabel.text = "A Bunch of fonts. Animated. Colored. For your friends."
+        textLabel.text = "A Bunch of fonts. Animated. Colored."
+        textLabel.adjustsFontSizeToFitWidth = true
+        textLabel.minimumScaleFactor = 0.1
         containerView.addSubview(textLabel)
         
         self.textPrompt = UITextField()
@@ -77,12 +79,11 @@ class StartViewController: UIViewController {
         thanksButton.layer.cornerRadius = 5.0
         self.view.addSubview(thanksButton)
         
-//        containerView.anchorInCenterFillingWidthAndHeightWithLeftAndRightPadding(view.width() * 0.1, topAndBottomPadding: view.height() * 0.38)
         containerView.anchorInCenterWithWidth(view.width() * 0.7, height: view.height() * 0.3)
-        textLabel.anchorTopCenterWithTopPadding(10.0, width: containerView.width() * 0.9, height: 60)
-        textPrompt.alignUnder(textLabel, matchingCenterWithTopPadding: 10.0, width: containerView.width() * 0.9, height: 45)
-        textButton.alignUnder(textPrompt, matchingCenterWithTopPadding: 10.0, width: 45, height: 35)
-        thanksButton.anchorBottomRightWithRightPadding(5.0, bottomPadding: 5.0, width: 150.0, height: 35.0)
+        textLabel.anchorTopCenterWithTopPadding(10.0, width: containerView.width() * 0.9, height: containerView.height() * 0.3)
+        textPrompt.alignUnder(textLabel, matchingCenterWithTopPadding: 10.0, width: containerView.width() * 0.9, height: containerView.height() * 0.1)
+        textButton.alignUnder(textPrompt, matchingCenterWithTopPadding: 10.0, width: 45, height: containerView.height() * 0.3)
+        thanksButton.anchorBottomRightWithRightPadding(5.0, bottomPadding: 5.0, width: self.view.width() * 0.4, height: containerView.height() * 0.2)
         
     }
     
