@@ -13,6 +13,8 @@ import FontBlaster
 
 class StartViewController: UIViewController {
     var textPrompt: UITextField!
+    var isPresenting: Bool!
+    var animationDuration: NSTimeInterval = 0.3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,18 +132,7 @@ class StartViewController: UIViewController {
         basic.duration = 2.4
         
         return basic
-    }
-    
-    func presentThanksController(sender: AnyObject) {
-        var fontLibrary = UIFont.familyNames()
-        let randomNumber = Int(arc4random_uniform(UInt32(fontLibrary.count)))
-        let randomFont: String = fontLibrary[randomNumber]
-        
-        let thanksVC = FontViewController(font: randomFont)
-        thanksVC.createdCard.textLabel.text = "Thanks and Dedication \n (In \(randomFont))"
-        thanksVC.descriptionLabel.text = "This would not exist without the following products: \n \n Facade \n FontBlaster \n Koloda \n Chameleon \n \nDescriptions via Wikipedia \nThanks to Do-Hee Kim for inspiring this project with 100daysoffonts.com"
-        self.presentViewController(thanksVC, animated: true, completion: nil)
-    }
+    }    
     
 }
 

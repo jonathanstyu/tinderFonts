@@ -15,6 +15,7 @@
 		312F408E1B95015F002B3D4A /* tinderFontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F408D1B95015F002B3D4A /* tinderFontsTests.swift */; };
 		312F409A1B9501D5002B3D4A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 312F40991B9501D5002B3D4A /* Podfile */; };
 		312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F409B1B968A9A002B3D4A /* SwipeViewController.swift */; };
+		316B26F81BD9B85200848CF6 /* StartViewController-Thanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316B26F71BD9B85200848CF6 /* StartViewController-Thanks.swift */; settings = {ASSET_TAGS = (); }; };
 		319B5D631BAF58C100395FE4 /* Fonts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 319B5D621BAF58C100395FE4 /* Fonts.bundle */; };
 		319B5D651BAF638000395FE4 /* SwipeViewControllerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */; };
 		319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */ = {isa = PBXBuildFile; fileRef = 319EDAFC1B99E2340095ED50 /* font-descriptions.json */; };
@@ -56,6 +57,7 @@
 		312F408D1B95015F002B3D4A /* tinderFontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinderFontsTests.swift; sourceTree = "<group>"; };
 		312F40991B9501D5002B3D4A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		312F409B1B968A9A002B3D4A /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		316B26F71BD9B85200848CF6 /* StartViewController-Thanks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartViewController-Thanks.swift"; sourceTree = "<group>"; };
 		319B5D621BAF58C100395FE4 /* Fonts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Fonts.bundle; sourceTree = "<group>"; };
 		319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerAd.swift; sourceTree = "<group>"; };
 		319EDAFC1B99E2340095ED50 /* font-descriptions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "font-descriptions.json"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				319EDB151B9CD7EC0095ED50 /* CardViewControllerCell.swift */,
 				312F40771B95015E002B3D4A /* AppDelegate.swift */,
 				312F40791B95015E002B3D4A /* StartViewController.swift */,
+				316B26F71BD9B85200848CF6 /* StartViewController-Thanks.swift */,
 				312F409B1B968A9A002B3D4A /* SwipeViewController.swift */,
 				319EDB111B9BBD730095ED50 /* SwipeViewControllerUI.swift */,
 				319B5D641BAF638000395FE4 /* SwipeViewControllerAd.swift */,
@@ -362,6 +365,7 @@
 				312F407A1B95015E002B3D4A /* StartViewController.swift in Sources */,
 				312F40781B95015E002B3D4A /* AppDelegate.swift in Sources */,
 				31F121EA1BA27B370088DD72 /* GifView.swift in Sources */,
+				316B26F81BD9B85200848CF6 /* StartViewController-Thanks.swift in Sources */,
 				31D09B351BA900A500791A66 /* CardTapView.swift in Sources */,
 				3127945C1BAF98DD0007E423 /* FontViewController.swift in Sources */,
 				312F409C1B968A9A002B3D4A /* SwipeViewController.swift in Sources */,
