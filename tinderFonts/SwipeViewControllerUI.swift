@@ -55,8 +55,6 @@ extension SwipeViewController {
         button.addTarget(self, action: "downloadButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         self.downloadButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = self.downloadButton
-        self.downloadButton.enabled = false
-//        self.view.addSubview(self.downloadButton)
     }
     
 //    Called in ViewDidLoad
@@ -66,13 +64,25 @@ extension SwipeViewController {
     }
     
     func downloadButtonTapped(target: AnyObject) {
-        Factory.createGif(self.imageCache, loopCount: 5, frameDelay: 1.0) { (data, error) -> Void in
-            if data != nil {
-//                var view = GifView(gifImage: data, frame: UIApplication.sharedApplication().keyWindow!.frame)
-//                UIApplication.sharedApplication().keyWindow!.addSubview(view)
-                let gifView = GifView(gifImage: data)
-                self.presentViewController(gifView, animated: true, completion: nil)
+        
+        if self.imageCache.count > 0 {
+            Factory.createGif(self.imageCache, loopCount: 5, frameDelay: 1.0) { (data, error) -> Void in
+                if data != nil {
+                    //                var view = GifView(gifImage: data, frame: UIApplication.sharedApplication().keyWindow!.frame)
+                    //                UIApplication.sharedApplication().keyWindow!.addSubview(view)
+                    let gifView = GifView(gifImage: data)
+                    self.presentViewController(gifView, animated: true, completion: nil)
+                }
             }
+        } else {
+            let emptyAlert = UIAlertController(title: "Nothing Here!", message: "Want to download these fonts? Swipe right on a few.", preferredStyle: UIAlertControllerStyle.Alert)
+            let ok = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Cancel, handler: { (alertaction) -> Void in
+                
+            })
+            emptyAlert.addAction(ok)
+            
+            self.presentViewController(emptyAlert, animated: true, completion: nil)
         }
+
     }
 }

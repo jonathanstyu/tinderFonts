@@ -94,6 +94,8 @@ class StartViewController: UIViewController {
         let text = self.textPrompt.text as String?
         self.textPrompt.text = ""
         swipeNVC.viewControllers = [SwipeViewController(tinderText: text)]
+        swipeNVC.transitioningDelegate = self
+        swipeNVC.modalPresentationStyle = .Custom
         self.presentViewController(swipeNVC, animated: true, completion: nil)
     }
     

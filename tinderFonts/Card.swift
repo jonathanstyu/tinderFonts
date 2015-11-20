@@ -42,7 +42,7 @@ class Card: UIView {
         
         textLabel = UILabel(frame: CGRectMake(0, 0, self.width(), self.height()))
         textLabel.text = self.text
-        textLabel.textColor = ContrastColorOf(colorTheme, returnFlat: true)
+        textLabel.textColor = ContrastColorOf(colorTheme, true)
         textLabel.font = UIFont(name: self.font, size: 35)
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
