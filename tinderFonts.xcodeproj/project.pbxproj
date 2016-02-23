@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3127945C1BAF98DD0007E423 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3127945B1BAF98DD0007E423 /* FontViewController.swift */; };
+		312EB5261C7CD97F00426543 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 312EB5251C7CD97F00426543 /* README */; };
+		312EB52C1C7CDA6800426543 /* tf-Icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 312EB5271C7CDA6800426543 /* tf-Icon.jpg */; };
+		312EB52D1C7CDA6800426543 /* tf-page.png in Resources */ = {isa = PBXBuildFile; fileRef = 312EB5281C7CDA6800426543 /* tf-page.png */; };
+		312EB52E1C7CDA6800426543 /* tf-prof.png in Resources */ = {isa = PBXBuildFile; fileRef = 312EB5291C7CDA6800426543 /* tf-prof.png */; };
+		312EB52F1C7CDA6800426543 /* tf-start.png in Resources */ = {isa = PBXBuildFile; fileRef = 312EB52A1C7CDA6800426543 /* tf-start.png */; };
+		312EB5301C7CDA6800426543 /* tf-swipe.png in Resources */ = {isa = PBXBuildFile; fileRef = 312EB52B1C7CDA6800426543 /* tf-swipe.png */; };
 		312F40781B95015E002B3D4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F40771B95015E002B3D4A /* AppDelegate.swift */; };
 		312F407A1B95015E002B3D4A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312F40791B95015E002B3D4A /* StartViewController.swift */; };
 		312F407F1B95015E002B3D4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312F407E1B95015E002B3D4A /* Images.xcassets */; };
@@ -46,6 +52,12 @@
 /* Begin PBXFileReference section */
 		18BF1A92F7DC6291E848B2B3 /* Pods_tinderFonts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinderFonts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3127945B1BAF98DD0007E423 /* FontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		312EB5251C7CD97F00426543 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		312EB5271C7CDA6800426543 /* tf-Icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tf-Icon.jpg"; sourceTree = "<group>"; };
+		312EB5281C7CDA6800426543 /* tf-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tf-page.png"; sourceTree = "<group>"; };
+		312EB5291C7CDA6800426543 /* tf-prof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tf-prof.png"; sourceTree = "<group>"; };
+		312EB52A1C7CDA6800426543 /* tf-start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tf-start.png"; sourceTree = "<group>"; };
+		312EB52B1C7CDA6800426543 /* tf-swipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tf-swipe.png"; sourceTree = "<group>"; };
 		312F40721B95015E002B3D4A /* ThunderFonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThunderFonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312F40761B95015E002B3D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312F40771B95015E002B3D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312EB5311C7CDA7200426543 /* README */ = {
+			isa = PBXGroup;
+			children = (
+				312EB5271C7CDA6800426543 /* tf-Icon.jpg */,
+				312EB5281C7CDA6800426543 /* tf-page.png */,
+				312EB5291C7CDA6800426543 /* tf-prof.png */,
+				312EB52A1C7CDA6800426543 /* tf-start.png */,
+				312EB52B1C7CDA6800426543 /* tf-swipe.png */,
+				312EB5251C7CD97F00426543 /* README */,
+			);
+			name = README;
+			sourceTree = "<group>";
+		};
 		312F40691B95015E002B3D4A = {
 			isa = PBXGroup;
 			children = (
+				312EB5311C7CDA7200426543 /* README */,
 				312F40991B9501D5002B3D4A /* Podfile */,
 				312F40741B95015E002B3D4A /* tinderFonts */,
 				319EDB061B9A798C0095ED50 /* Patterns */,
@@ -282,12 +308,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312EB52E1C7CDA6800426543 /* tf-prof.png in Resources */,
+				312EB52D1C7CDA6800426543 /* tf-page.png in Resources */,
 				312F40821B95015E002B3D4A /* LaunchScreen.xib in Resources */,
+				312EB52F1C7CDA6800426543 /* tf-start.png in Resources */,
 				319EDAFD1B99E2340095ED50 /* font-descriptions.json in Resources */,
+				312EB52C1C7CDA6800426543 /* tf-Icon.jpg in Resources */,
+				312EB5301C7CDA6800426543 /* tf-swipe.png in Resources */,
 				312F409A1B9501D5002B3D4A /* Podfile in Resources */,
 				312F407F1B95015E002B3D4A /* Images.xcassets in Resources */,
 				319B5D631BAF58C100395FE4 /* Fonts.bundle in Resources */,
 				319EDB071B9A798C0095ED50 /* Patterns in Resources */,
+				312EB5261C7CD97F00426543 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
